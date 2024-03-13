@@ -1,5 +1,7 @@
+import withWrapper from "./hoc/Wrapper";
+
 const About = () => {
   return <div>About</div>;
 };
 
-export default About;
+export default withWrapper(About);

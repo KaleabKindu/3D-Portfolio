@@ -8,14 +8,14 @@ import {
   TechStack,
   Works,
 } from ".";
+import StarsCanvas from "./canvas/StarsCanvas";
 
-const Home = () => {
+const App = () => {
   return (
-    <div className="flex flex-col w-full gap-10">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <NavBar />
-        <Hero />
-      </div>
+    <div className=" flex flex-col w-full gap-10">
+      <StarsCanvas />
+      <NavBar />
+      <Hero />
       <About />
       <Experience />
       <TechStack />
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;

@@ -6,9 +6,9 @@ import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import CanvasLoader from "../CanvasLoader";
 
-const HeroCanvas = () => {
+const ComputerCanvas = () => {
   return (
-    <div className="absolute top-0 w-full h-screen">
+    <div className="relative hidden lg:block z-20 w-full h-full">
       <Canvas shadows camera={{ position: [20, 3, 5], fov: 25 }}>
         <Computer />
         <OrbitControls
@@ -29,7 +29,6 @@ const Computer = () => {
     if (viewport.width < 10) {
       setScale(0.5);
     }
-    console.log(viewport.width);
   }, [viewport]);
   return (
     <Suspense fallback={<CanvasLoader />}>
@@ -37,14 +36,15 @@ const Computer = () => {
         <primitive
           scale={scale}
           rotation={[-0.01, -0.2, -0.1]}
-          position={[0, -2.25, -1.5]}
+          position={[0, -1.25, -1.5]}
           object={computer.scene}
         />
         <hemisphereLight intensity={1} />
+        <ambientLight intensity={1} />
         <spotLight />
       </mesh>
     </Suspense>
   );
 };
 
-export default HeroCanvas;
+export default ComputerCanvas;
