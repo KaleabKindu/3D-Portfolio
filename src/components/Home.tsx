@@ -9,12 +9,10 @@ import {
   Works,
 } from ".";
 
-type Props = {};
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <div className="flex flex-col w-full gap-10">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center h-[100vh]">
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <NavBar />
         <Hero />
       </div>

@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const Feedbacks = (props: Props) => {
+const Feedbacks = () => {
   return <div>Feedbacks</div>;
 };
 
