@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
-import { IoLogoLinkedin, IoLogoDiscord, IoLogoFacebook } from "react-icons/io5";
+import { IoLogoLinkedin, IoLogoDiscord, IoLogoGithub } from "react-icons/io5";
 
 const NavBar = () => {
   return (
-    <div className="fixed flex items-center justify-between top-0 w-full z-50 px-2 lg:px-20 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md">
+    <div className="sticky flex items-center justify-between top-0 w-full z-50 px-2 lg:px-20 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md">
       <Link to={"/"} className="flex flex-1 items-center gap-5 ">
         <img
           src="/logo-4.svg"
@@ -29,7 +29,7 @@ const NavBar = () => {
       </div>
       <div className="hidden md:flex gap-5 justify-end items-center flex-1">
         <a href="http://">
-          <IoLogoFacebook size={30} />
+          <IoLogoGithub size={30} />
         </a>
         <a href="http://">
           <IoLogoLinkedin size={30} />
