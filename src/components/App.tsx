@@ -4,9 +4,9 @@ import {
   About,
   Contact,
   Experience,
+  Projects,
   Feedbacks,
   TechStack,
-  Works,
 } from ".";
 import StarsCanvas from "./canvas/StarsCanvas";
 
@@ -19,7 +19,7 @@ const App = () => {
       <About />
       <Experience />
       <TechStack />
-      <Works />
+      <Projects />
       <Feedbacks />
       <Contact />
     </div>

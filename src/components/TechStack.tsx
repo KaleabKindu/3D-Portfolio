@@ -9,9 +9,12 @@ import {
 
 const TechStack = () => {
   return (
-    <section
+    <motion.section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full z-20 overflow-hidden pb-80 py-20"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex flex-col items-center justify-center gap-3 z-20 overflow-hidden h-[80vh]"
       style={{ transform: "scale(0.9)" }}
     >
       <SkillText />
@@ -50,7 +53,7 @@ const TechStack = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
@@ -88,9 +91,7 @@ const Stack = ({ src, index }: Props) => {
   const animationDelay = 0.3;
   return (
     <motion.div
-      initial="hidden"
       variants={slideInFromRight(animationDelay * index)}
-      animate="visible"
       custom={index}
       transition={{ delay: index * animationDelay }}
       className="flex justify-center items-center"
