@@ -37,7 +37,8 @@ const About = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex flex-col items-center h-[80vh]"
+      id="about"
+      className="flex flex-col items-center min-h-[80vh] pt-10"
     >
       <motion.div
         initial="hidden"
@@ -54,7 +55,7 @@ const About = () => {
 
       <motion.p
         variants={slideInFromLeft(0.5)}
-        className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px]"
+        className="mt-4 text-secondary text-center text-[17px] max-w-5xl leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
@@ -63,7 +64,7 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex justify-center flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={index} index={index} {...service} />
         ))}

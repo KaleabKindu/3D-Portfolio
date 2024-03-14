@@ -53,10 +53,10 @@ const Feedbacks = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className={`mt-12 bg-black-100 rounded-[20px]`}
+      className={`mt-12 bg-black-100 w-full mx-auto rounded-[20px]`}
     >
       <div
-        className={`flex flex-col items-center bg-tertiary rounded-2xl sm:px-16 px-6 sm:py-16 py-1 min-h-[300px]`}
+        className={`flex flex-col items-center bg-tertiary rounded-2xl sm:px-16 px-6 sm:py-16 py-1`}
       >
         <motion.div variants={slideInFromLeft(0.5)}>
           <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">
@@ -67,9 +67,7 @@ const Feedbacks = () => {
           </h2>
         </motion.div>
       </div>
-      <div
-        className={`-mt-20 pb-14 sm:px-16 px-6 flex justify-center flex-wrap gap-7`}
-      >
+      <div className={`p-6 flex justify-center flex-wrap gap-7`}>
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}

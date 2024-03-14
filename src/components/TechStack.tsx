@@ -14,7 +14,7 @@ const TechStack = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex flex-col items-center justify-center gap-3 z-20 overflow-hidden h-[80vh]"
+      className="flex flex-col items-center justify-center gap-3 z-20 overflow-hidden min-h-[80vh]"
       style={{ transform: "scale(0.9)" }}
     >
       <SkillText />

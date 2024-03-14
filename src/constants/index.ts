@@ -41,8 +41,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -272,7 +272,7 @@ const projects = [
   },
 ];
 
-export const Socials = [
+export const Socials_links = [
   {
     name: "Discord",
     src: "/instagram.svg",

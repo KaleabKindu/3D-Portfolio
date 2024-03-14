@@ -1,6 +1,6 @@
 import { OrbitControls, Preload } from "@react-three/drei";
-import { Canvas, useThree } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
@@ -26,18 +26,11 @@ const ComputerCanvas = () => {
 
 const Computer = () => {
   const computer = useLoader(GLTFLoader, "/desktop_pc/scene.gltf");
-  const [scale, setScale] = useState(0.75);
-  const { viewport } = useThree();
-  useEffect(() => {
-    if (viewport.width < 10) {
-      setScale(0.5);
-    }
-  }, [viewport]);
   return (
     <mesh>
       <primitive
-        scale={scale}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={0.75}
+        rotation={[-0.01, -1, -0.1]}
         position={[0, -1.25, -1.5]}
         object={computer.scene}
       />
