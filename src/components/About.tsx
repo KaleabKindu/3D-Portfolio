@@ -35,8 +35,9 @@ const About = () => {
   return (
     <motion.div
       initial="hidden"
-      animate="visible"
-      className="flex flex-col items-center"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex flex-col items-center h-[80vh]"
     >
       <motion.div
         initial="hidden"
