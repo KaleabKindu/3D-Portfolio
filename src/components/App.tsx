@@ -8,6 +8,7 @@ import {
   Feedbacks,
   TechStack,
 } from ".";
+import Footer from "./Footer";
 import StarsCanvas from "./canvas/StarsCanvas";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       <Projects />
       <Feedbacks />
       <Contact />
+      <Footer />
     </div>
   );
 };

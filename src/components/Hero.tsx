@@ -28,6 +28,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true }}
       className="flex gap-5 items-center justify-center w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
@@ -97,18 +98,6 @@ const HeroContent = () => {
           Learn More!
         </motion.a>
       </div>
-
-      {/* <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
-      >
-        <Image
-          src="/mainIconsdark.svg"
-          alt="work icons"
-          height={650}
-          width={650}
-        />
-      </motion.div> */}
     </motion.div>
   );
 };
